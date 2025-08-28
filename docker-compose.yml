@@ -1,5 +1,6 @@
-# Included: audiobookshelf, File Browser, Kavita, Plex, Tautulli
+# Included: Plex, Tautulli, Kavita, audiobookshelf, File Browser
 # Future inclusion: Bazarr, Heimdall, Kometa, Smokeping
+# Heimdall: validate port availability; delete old config files for clean slate; uncertain about ALLOW_INTERNAL_REQUESTS
 
 version: "3"
 
@@ -69,3 +70,18 @@ services:
       - /mnt/hd1/Plex/DockerConfigs/filebrowser:/config
     environment:
       - FB_BASEURL=/filebrowser
+
+#  heimdall:
+#    image: lscr.io/linuxserver/heimdall:latest
+#    container_name: heimdall
+#    environment:
+#      - PUID=${PUID}
+#      - PGID=${PGID}
+#      - TZ=${TZ}
+#      - ALLOW_INTERNAL_REQUESTS=false #optional
+#    volumes:
+#      - /mnt/hd1/Plex/DockerConfigs/heimdall:/config
+#    ports:
+#      - 80:80 #http gui
+#      - 443:443 #https gui
+#    restart: unless-stopped
