@@ -62,7 +62,7 @@ services:
 
   filebrowser:
     image: hurlenko/filebrowser:latest
-    user: "${PUID}:${PGID}"
+    user: "${UID}:${GID}"
     ports:
       - 443:8080
     volumes:
