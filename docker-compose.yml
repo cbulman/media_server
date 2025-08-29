@@ -61,7 +61,7 @@ services:
     restart: unless-stopped
 
   filebrowser:
-    image: hurlenko/filebrowser
+    image: hurlenko/filebrowser:latest
     user: "${PUID}:${PGID}"
     ports:
       - 443:8080
@@ -70,6 +70,7 @@ services:
       - /mnt/hd1/Plex/DockerConfigs/filebrowser:/config
     environment:
       - FB_BASEURL=/filebrowser
+    restart: unless-stopped
 
 #  heimdall:
 #    image: lscr.io/linuxserver/heimdall:latest
