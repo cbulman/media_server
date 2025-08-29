@@ -2,7 +2,7 @@
 # Future inclusion: Bazarr, Heimdall, Kometa, Smokeping
 # Heimdall: validate port availability; delete old config files for clean slate; uncertain about ALLOW_INTERNAL_REQUESTS
 
-version: "3"
+version: "3.8"
 
 services:
   plex: 
