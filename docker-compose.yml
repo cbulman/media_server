@@ -17,6 +17,7 @@ services:
       - /mnt/hd1/Plex/DockerConfigs/plex:/config
       - "/mnt/hd1/Plex/TV Shows:/tv"
       - /mnt/hd1/Plex/Movies:/movies
+      - /mnt/hd1/Plex/Music:/music
       - /mnt/hd1/Plex/Web:/web
       - /mnt/hd1/Plex/Prerolls:/Prerolls
     restart: unless-stopped
